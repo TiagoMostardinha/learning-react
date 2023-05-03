@@ -1,22 +1,22 @@
+import { useState } from "react";
+
 const Home = () => {
+    
+    // setting a hook
+    const [name,setName] = useState('mario');
+    const [age,setAge] = useState(25);
+
     const handleClick = () => {
-        console.log('Button was clicked!');
-    }
-
-    const handleClickAgain = (name) => {
-        console.log('hello ' + name);
-    }
-
-    const handleClickAgainAgain = (name,e) => {
-        console.log('hello ' + name,e);
+        setName('luigi');
+        setAge(30);
+        
     }
 
     return (
         <div className="home">
             <h2>Homepage</h2>
+            <p>{ name } is { age } years old.</p>
             <button onClick={handleClick}>Click me</button>
-            <button onClick={() => { handleClickAgain('mario') }}>Click me again</button>
-            <button onClick={(e) => { handleClickAgainAgain('yoshi',e) }}>Click me again again</button>
         </div>
     );
 }
