@@ -15,6 +15,7 @@ const Home = () => {
 
 export default Home;
 
+
 /* Endpoints
 /blogs          GET    Fetch all blogs
 /blogs/{id}     GET    Fetch a single blog
